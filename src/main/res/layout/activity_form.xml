@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FormActivity">
+
+    <EditText
+        android:id="@+id/userNameEditText"
+        android:layout_width="386dp"
+        android:layout_height="63dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="16dp"
+        android:hint="Enter your name"
+        android:inputType="textLongMessage" />
+
+    <EditText
+        android:id="@+id/phoneNumberEditText"
+        android:layout_width="374dp"
+        android:layout_height="56dp"
+        android:layout_below="@id/userNameEditText"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:hint="Enter Phone Number"
+        android:inputType="phone" />
+
+    <Spinner
+        android:id="@+id/dropdownSpinner"
+        android:layout_width="377dp"
+        android:layout_height="72dp"
+        android:layout_below="@id/phoneNumberEditText"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="16dp" />
+
+    <EditText
+        android:id="@+id/displayDateEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dropdownSpinner"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/pickdateBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/displayDateEditText"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Pick Date"
+        android:textAllCaps="false" />
+
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="383dp"
+        android:layout_height="154dp"
+        android:layout_below="@id/pickdateBtn"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="16dp"
+        android:descendantFocusability="blocksDescendants"
+        android:timePickerMode="spinner" />
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timePicker"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="30dp"
+        android:text="Submit" />
+
+    <Button
+        android:id="@+id/mainMenuBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timePicker"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="30dp"
+        android:onClick="goToMain"
+        android:text="Return to menu" />
+
+
+</RelativeLayout>

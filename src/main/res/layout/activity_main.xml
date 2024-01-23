@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainbottom"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/barberName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16sp"
+        android:background="@color/black"
+        android:text="Dapper Cuts"
+        android:textColor="@android:color/white"
+        android:textSize="70sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/bookBtn"
+        android:layout_width="140dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:onClick="goToForm"
+        android:text="Book now!"
+        app:layout_constraintTop_toBottomOf="@id/barberName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/reviewbtn" />
+
+    <Button
+        android:id="@+id/reviewbtn"
+        android:layout_width="140dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:onClick="goToReview"
+        android:text="Review"
+        app:layout_constraintTop_toBottomOf="@id/barberName"
+        app:layout_constraintStart_toEndOf="@id/bookBtn"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Space
+        android:id="@+id/spaceBetweenButtonsAndWelcomeMsg"
+        android:layout_width="0dp"
+        android:layout_height="325sp"
+        app:layout_constraintTop_toBottomOf="@id/bookBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/welcomeMsg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="Welcome to the best barbers in Brighton. This is our easy booking app where you only need to enter your name, number, what cut you would like, and the time. Then we give you the best haircut possible."
+        android:textColor="#C3CFF3"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spaceBetweenButtonsAndWelcomeMsg" />
+
+    <Button
+        android:id="@+id/appointmentBtn"
+        android:layout_width="140dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="96dp"
+        android:onClick="goToAppointmentHistory"
+        android:text="Appointments"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/bookBtn"
+        app:layout_constraintTop_toBottomOf="@id/barberName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
